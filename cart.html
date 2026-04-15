@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - SmartGrocery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">SmartGrocery<span>AI-Powered Shopping</span></a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="recommend.html">Smart Suggest</a></li>
+      <li><a href="cart.html" class="active">Cart <span class="cart-badge">0</span></a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#" onclick="openModal('login')">Login</a></li>
+    </ul>
+  </nav>
+
+  <section class="section" style="margin-top:70px">
+    <h2 class="section-title">Your Cart</h2>
+    <p class="section-subtitle">Review your items before checkout</p>
+    <div class="cart-container" id="cartContainer"></div>
+  </section>
+
+  <div class="modal-overlay" id="authModal">
+    <div class="modal">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <h2 id="modalTitle">Welcome Back</h2>
+      <div id="signupFields" style="display:none"><div class="form-group"><label>Full Name</label><input type="text"></div></div>
+      <div class="form-group"><label>Email</label><input type="email"></div>
+      <div class="form-group"><label>Password</label><input type="password"></div>
+      <button class="btn btn-primary" style="width:100%" onclick="closeModal()">Continue</button>
+      <p class="switch-auth" id="switchText"></p>
+    </div>
+  </div>
+
+  <footer class="footer"><p>&copy; 2025 SmartGrocery</p></footer>
+  <script src="js/script.js"></script>
+  <script>
+    function renderCart() {
+      const cart = getCart();
+      const container = document.getElementById('cartContainer');
+      if (!cart.length) {
+        container.innerHTML = '<div class="empty-cart"><h2>🛒 Your cart is empty</h2><p>Start adding some fresh groceries!</p><a href="products.html" class="btn btn-primary" style="margin-top:1rem;display:inline-block">Browse Products</a></div>';
+        updateCartBadge();
+        return;
+      }
+      const total = cart.reduce((s, i) => s + i.price * (i.qty || 1), 0);
+      container.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/80/1a1a2e/00d4aa?text=Item'">
+          <div class="cart-item-info">
+            <h3>${item.name}</h3>
+            <p>${item.unit} × ${item.qty || 1}</p>
+          </div>
+          <span class="price">₹${item.price * (item.qty || 1)}</span>
+          <button class="remove-btn" onclick="removeFromCart('${item.id}')">✕ Remove</button>
+        </div>
+      `).join('') + `
+        <div class="cart-summary">
+          <p style="color:var(--text-secondary);margin-bottom:0.5rem">Total Amount</p>
+          <span class="total">₹${total}</span>
+          <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+            <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+            <button class="btn btn-danger btn-sm" onclick="localStorage.removeItem('groceryCart');renderCart()">Clear Cart</button>
+          </div>
+        </div>`;
+      updateCartBadge();
+    }
+    renderCart();
+  </script>
+</body>
+</html>

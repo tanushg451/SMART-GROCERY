@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product id="1" category="fruits">
+    <name>Fresh Apples</name><price>180</price><unit>1 kg</unit>
+    <image>images/apples.jpg</image><description>Crisp and juicy red apples</description>
+  </product>
+  <product id="2" category="fruits">
+    <name>Bananas</name><price>45</price><unit>1 dozen</unit>
+    <image>images/bananas.jpg</image><description>Fresh yellow bananas</description>
+  </product>
+  <product id="3" category="fruits">
+    <name>Mangoes</name><price>250</price><unit>1 kg</unit>
+    <image>images/mangoes.jpg</image><description>Sweet Alphonso mangoes</description>
+  </product>
+  <product id="4" category="fruits">
+    <name>Oranges</name><price>120</price><unit>1 kg</unit>
+    <image>images/oranges.jpg</image><description>Juicy Nagpur oranges</description>
+  </product>
+  <product id="5" category="vegetables">
+    <name>Tomatoes</name><price>40</price><unit>1 kg</unit>
+    <image>images/tomatoes.jpg</image><description>Fresh red tomatoes</description>
+  </product>
+  <product id="6" category="vegetables">
+    <name>Potatoes</name><price>35</price><unit>1 kg</unit>
+    <image>images/potatoes.jpg</image><description>Premium quality potatoes</description>
+  </product>
+  <product id="7" category="vegetables">
+    <name>Onions</name><price>50</price><unit>1 kg</unit>
+    <image>images/onions.jpg</image><description>Fresh red onions</description>
+  </product>
+  <product id="8" category="vegetables">
+    <name>Spinach</name><price>30</price><unit>1 bundle</unit>
+    <image>images/spinach.jpg</image><description>Organic fresh spinach</description>
+  </product>
+  <product id="9" category="vegetables">
+    <name>Capsicum</name><price>80</price><unit>500g</unit>
+    <image>images/capsicum.jpg</image><description>Colorful bell peppers</description>
+  </product>
+  <product id="10" category="dairy">
+    <name>Amul Milk</name><price>68</price><unit>1 litre</unit>
+    <image>images/milk.jpg</image><description>Full cream toned milk</description>
+  </product>
+  <product id="11" category="dairy">
+    <name>Paneer</name><price>320</price><unit>1 kg</unit>
+    <image>images/paneer.jpg</image><description>Fresh cottage cheese</description>
+  </product>
+  <product id="12" category="dairy">
+    <name>Curd</name><price>45</price><unit>500g</unit>
+    <image>images/curd.jpg</image><description>Creamy natural curd</description>
+  </product>
+  <product id="13" category="dairy">
+    <name>Butter</name><price>56</price><unit>100g</unit>
+    <image>images/butter.jpg</image><description>Amul salted butter</description>
+  </product>
+  <product id="14" category="packaged">
+    <name>Basmati Rice</name><price>350</price><unit>5 kg</unit>
+    <image>images/rice.jpg</image><description>Premium aged basmati rice</description>
+  </product>
+  <product id="15" category="packaged">
+    <name>Wheat Flour</name><price>280</price><unit>5 kg</unit>
+    <image>images/flour.jpg</image><description>Whole wheat chakki atta</description>
+  </product>
+  <product id="16" category="packaged">
+    <name>Cooking Oil</name><price>210</price><unit>1 litre</unit>
+    <image>images/oil.jpg</image><description>Refined sunflower oil</description>
+  </product>
+  <product id="17" category="packaged">
+    <name>Dal (Toor)</name><price>160</price><unit>1 kg</unit>
+    <image>images/dal.jpg</image><description>Premium quality toor dal</description>
+  </product>
+  <product id="18" category="packaged">
+    <name>Sugar</name><price>48</price><unit>1 kg</unit>
+    <image>images/sugar.jpg</image><description>Refined white sugar</description>
+  </product>
+</products>
